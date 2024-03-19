@@ -36,10 +36,10 @@ export default function NavbarLight(){
         <div className="container flex flex-wrap items-center justify-between">
             <Link to="/index" className="navbar-brand md:me-8" >
                 <span className="inline-block dark:hidden">
-                    <img src="/images/logo-dark.png" className="l-dark" alt=""/>
-                    <img src="/images/logo-light.png" className="l-light" alt=""/>
+                    <span>NAOMI.</span>
+                    <span>NAOMI.</span>
                 </span>
-                <img src="/images/logo-light.png" className="hidden dark:inline-block" alt=""/>
+                <span>NAOMI.</span>
             </Link>
             
 

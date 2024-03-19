@@ -15,13 +15,13 @@ export default function HeroOne(){
                         <TypeAnimation
                             sequence={[
                                 // Same substring at the start will only be typed out once, initially
-                                'Dennis Scott',
+                                'Naomi',
                                 1000, // wait 1s before replacing "Mice" with "Hamsters"
-                                'Website Designer',
+                                'Software Engenieer',
                                 1000,
                                 'Web Developer',
                                 1000,
-                                'UI/UX Designer',
+                                'Programmer',
                                 1000
                             ]}
                             wrapper="span"
@@ -30,7 +30,7 @@ export default function HeroOne(){
                             repeat={Infinity}
                         />
                         <span className="typewrite text-amber-500" data-period="2000" data-type='[ "Dennis Scott", "Website Designer", "Web Developer", "UI/UX Designer" ]'> <span className="wrap"></span> </span></h4>
-                        <p className="text-slate-400 max-w-xl">Obviously I'm a Web Designer. Web Developer with over 7 years of experience. Experienced with all stages of the development.</p>
+                        <p className="text-slate-400 max-w-xl">Participo de times interdiciplinares, nacionais e internacionais, em projetos de grande escala para clientes como Banco Inter, Vale SA, Hermes Pardini, Coca-Cola, entre outros. Tendo experienciado todos os estágios do desenvolvimento web.</p>
                     
                         <div className="mt-6">
                             <Link to="" className="btn bg-amber-500 hover:bg-amber-600 border-amber-500 hover:border-amber-600 text-white rounded-md">Hire Me</Link>

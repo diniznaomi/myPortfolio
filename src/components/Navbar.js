@@ -35,8 +35,9 @@ export default function Navbar(){
         <nav className="navbar" id="navbar">
         <div className="container flex flex-wrap items-center justify-between">
             <Link to= "/index" className="navbar-brand md:me-8" href="index.html">
-                <img src="/images/logo-dark.png" className="inline-block dark:hidden" alt=""/>
-                <img src="/images/logo-light.png" className="hidden dark:inline-block" alt=""/>
+                <Link to="#" className="text-[22px] focus:outline-none">
+                        <span>NAOMI.</span>
+                </Link>
             </Link>
 
             <div className="nav-icons flex items-center lg_992:order-2 ms-auto md:ms-8">

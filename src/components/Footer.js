@@ -8,13 +8,13 @@ export default function Footer(){
             <div className="container text-center">
                 <div className="grid lg:grid-cols-12 md:grid-cols-3 grid-cols-1 items-center">
                     <div className="lg:col-span-3 md:text-start text-center">
-                        <Link to="#" className="text-[22px] focus:outline-none">
-                            <img src="/images/logo-light.png" className="mx-auto md:me-auto md:ms-0" alt=""/>
+                        <Link to="#" className="text-[18px] focus:outline-none">
+                        <span>NAOMI.</span>
                         </Link>
                     </div>
 
                     <div className="lg:col-span-5 text-center mt-6 md:mt-0">
-                        <p className="mb-0">© {new Date().getFullYear()} Dennis. Design & Develop with{""} <i className="mdi mdi-heart text-red-600"></i> by <Link to="https://shreethemes.in/" target="_blank" className="text-reset">Shreethemes</Link>.</p>
+                        <p className="mb-0">© {new Date().getFullYear()} Naomi. Develop with{""} <i className="mdi mdi-heart text-red-600"></i> by <Link to="https://shreethemes.in/" target="_blank" className="text-reset">Shreethemes</Link>.</p>
                     </div>
 
                     <ul className="lg:col-span-4 list-none md:text-end text-center mt-6 md:mt-0">
