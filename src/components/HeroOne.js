@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { TypeAnimation } from 'react-type-animation';
-import CountUp from 'react-countup';
 
 export default function HeroOne(){
     return(
@@ -17,12 +16,10 @@ export default function HeroOne(){
                                 // Same substring at the start will only be typed out once, initially
                                 'Naomi',
                                 1000, // wait 1s before replacing "Mice" with "Hamsters"
-                                'Software Engenieer',
+                                'Desenvolvedora de sites',
+                                1200,
+                                'Analista de Sistemas',
                                 1000,
-                                'Web Developer',
-                                1000,
-                                'Programmer',
-                                1000
                             ]}
                             wrapper="span"
                             speed={50}
@@ -33,27 +30,16 @@ export default function HeroOne(){
                         <p className="text-slate-400 max-w-xl">Participo de times interdiciplinares, nacionais e internacionais, em projetos de grande escala para clientes como Banco Inter, Vale SA, Hermes Pardini, Coca-Cola, entre outros. Tendo experienciado todos os estágios do desenvolvimento web.</p>
                     
                         <div className="mt-6">
-                            <Link to="" className="btn bg-amber-500 hover:bg-amber-600 border-amber-500 hover:border-amber-600 text-white rounded-md">Hire Me</Link>
+                            <Link to="https://wa.me/5531995737924" target="_blank" className="btn bg-amber-500 hover:bg-amber-600 border-amber-500 hover:border-amber-600 text-white rounded-md">
+                                Faça contato
+                                <img width={"22px"} height={"22px"} src="/images/icons/icons8-wpp.png" className="m-2" alt=""/>
+                            </Link>
                             <Link to="" className="btn bg-amber-500/10 hover:bg-amber-500 border-amber-500/10 hover:border-amber-500 text-amber-500 hover:text-white rounded-md ms-1">Download CV</Link>
                         </div>
                     </div>
 
-                    <div className="relative">
-                        <img src="/images/hero/2.png" alt=""/>
-
-                        <div className="absolute lg:bottom-20 md:bottom-10 bottom-2 ltr:md:-left-5 ltr:left-2 rtl:md:-right-5 rtl:right-2 p-4 rounded-lg shadow-md dark:shadow-gray-800 bg-white dark:bg-slate-900 m-3 w-44 text-center">
-                            <span className="text-3xl font-medium mb-0"><span className="counter-value font-bold" data-target="125"> <CountUp
-                                            start={7}
-                                            className="counter-value"
-                                            end={180}
-                                            duration={2.75} /></span>+</span>
-                            <h6 className="text-sm text-slate-400 mt-1">Project Completed</h6>
-                        </div>
-
-                        <div className="absolute lg:top-80 md:top-56 top-48 ltr:md:-right-0 ltr:right-2 rtl:md:-left-0 rtl:left-2 p-4 rounded-lg shadow-md dark:shadow-gray-800 bg-white dark:bg-slate-900 m-3 w-44 text-center">
-                            <h6 className="font-semibold">Web Designer</h6>
-                            <h6 className="text-sm text-slate-400 mt-1">7+ Years Experience</h6>
-                        </div>
+                    <div className="justify-end p-6">
+                        <img src="/images/hero/5.png" alt=""/>
                     </div>
                 </div>
             </div>
