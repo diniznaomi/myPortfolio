@@ -71,9 +71,9 @@ export default function Navbar(){
                     <li className="nav-item">
                         <Link1 to="home" activeClass="active" spy={true} smooth={true} duration={500} className="nav-link">Home</Link1>
                     </li>
-                    <li className="nav-item">
+                    {/* <li className="nav-item">
                         <Link1 to="about" activeClass="active" spy={true} smooth={true} duration={500} className="nav-link">Sobre mim</Link1>
-                    </li>
+                    </li> */}
                     <li className="nav-item">
                         <Link1 to="service" activeClass="active" spy={true} smooth={true} duration={500} className="nav-link">Serviços</Link1>
                     </li>

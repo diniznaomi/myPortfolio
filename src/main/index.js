@@ -14,9 +14,10 @@ import Clients from "../components/Clients";
 export default function Index(){
     useEffect(() => {
         document.documentElement.setAttribute("dir", "ltr");
+        
         const now = new Date();
         const currentHour = now.getHours();
-        console.log(now)
+
         if(currentHour >= 18 || currentHour < 6){
             document.documentElement.classList.add('dark');
         }else{

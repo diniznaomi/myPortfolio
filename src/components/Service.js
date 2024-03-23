@@ -10,8 +10,8 @@ export default function Services() {
                     <h3 className="mb-6 md:text-2xl text-xl md:leading-normal leading-normal font-semibold">O que posso fazer por você</h3>
 
                     <p className="text-slate-400 max-w-xl mx-auto text-[18px]">
-                        Como desenvolvedora web especializada, estou aqui para criar ou aprimorar seu website e sistemas,
-                        garantindo uma <b>presença online</b> impactante e que destaque sua singularidade e expertise, que
+                        Como desenvolvedora web especializada, estou aqui para criar ou aprimorar seu website e sistemas.
+                        Garanta uma <b>presença online</b> impactante e que destaca sua singularidade e expertise, que
                         <b> impulsiona suas vendas</b> e <b> otimiza seus fluxos de trabalho</b>. <br /><br />Transforme sua visão em realidade digital
                         e impulsione seu negócio para o sucesso com soluções web <b>personalizadas e eficientes</b>.
                         <br /><br />Vamos juntos alcançar novos patamares de excelência e prosperidade digital!

@@ -45,7 +45,7 @@ export default function HeroOne() {
             </section>
             <div className="relative">
                 <div className="absolute block w-full h-auto bottom-[25px] z-1 left-0">
-                    <Link to="#about"><i className="mdi mdi-arrow-down absolute top-0 left-0 right-0 text-center inline-flex items-center justify-center rounded-full bg-white dark:bg-slate-900 h-12 w-12 mx-auto shadow-md dark:shadow-gray-800"></i></Link>
+                    <span to="#about"><i className="mdi mdi-arrow-down absolute top-0 left-0 right-0 text-center inline-flex items-center justify-center rounded-full bg-white dark:bg-slate-900 h-12 w-12 mx-auto shadow-md dark:shadow-gray-800"></i></span>
                 </div>
             </div>
         </>
