@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import * as Unicons from '@iconscout/react-unicons'
 import { Link } from "react-router-dom";
+import { sendEmail } from "./../service";
 
 
 export default function GetInTouch(){
@@ -27,12 +28,12 @@ export default function GetInTouch(){
     };
 
     const sendMessage = () => {
-        var link = 'mailto:' 
-                    + "nalindsaydm@gmail.com" +
-                    '?subject=' + encodeURIComponent(subject) +
-                    '&body=' + encodeURIComponent(message);
-
-        window.location.href = link;
+        sendEmail({
+            name: name,
+            email: email,
+            subject: subject,
+            message: message
+        })
     };
 
 
