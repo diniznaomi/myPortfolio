@@ -72,22 +72,22 @@ export default function Navbar(){
                         <Link1 to="home" activeClass="active" spy={true} smooth={true} duration={500} className="nav-link">Home</Link1>
                     </li>
                     <li className="nav-item">
-                        <Link1 to="about" activeClass="active" spy={true} smooth={true} duration={500} className="nav-link">About Me</Link1>
+                        <Link1 to="about" activeClass="active" spy={true} smooth={true} duration={500} className="nav-link">Sobre mim</Link1>
                     </li>
                     <li className="nav-item">
-                        <Link1 to="service" activeClass="active" spy={true} smooth={true} duration={500} className="nav-link">Services</Link1>
+                        <Link1 to="service" activeClass="active" spy={true} smooth={true} duration={500} className="nav-link">Serviços</Link1>
                     </li>
                     <li className="nav-item">
-                        <Link1 to="experience" activeClass="active" spy={true} smooth={true} duration={500} className="nav-link">Experience</Link1>
+                        <Link1 to="experience" activeClass="active" spy={true} smooth={true} duration={500} className="nav-link">Experiência</Link1>
                     </li>
                     <li className="nav-item">
-                        <Link1 to="project" activeClass="active" spy={true} smooth={true} duration={500} className="nav-link">Projects</Link1>
+                        <Link1 to="project" activeClass="active" spy={true} smooth={true} duration={500} className="nav-link">Projetos</Link1>
                     </li>
-                    <li className="nav-item">
+                    {/* <li className="nav-item">
                         <Link1 to="blog" activeClass="active" spy={true} smooth={true} duration={500} className="nav-link">Blogs</Link1>
-                    </li>
+                    </li> */}
                     <li className="nav-item">
-                        <Link1 to="contact" activeClass="active" spy={true} smooth={true} duration={500} className="nav-link">Contact Me</Link1>
+                        <Link1 to="contact" activeClass="active" spy={true} smooth={true} duration={500} className="nav-link">Contato</Link1>
                     </li>
                 </ul>
             </div>
