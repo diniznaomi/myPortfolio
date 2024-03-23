@@ -37,8 +37,7 @@ export default function HeroOne(){
                             <Link to="" className="btn bg-amber-500/10 hover:bg-amber-500 border-amber-500/10 hover:border-amber-500 text-amber-500 hover:text-white rounded-md ms-1">Download CV</Link>
                         </div>
                     </div>
-
-                    <div className="justify-end p-6">
+                     <div className="relative p-6">
                         <img src="/images/hero/5.png" alt=""/>
                     </div>
                 </div>
