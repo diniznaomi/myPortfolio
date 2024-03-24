@@ -6,7 +6,7 @@ export default function AddBanner() {
             <div className="absolute inset-0 bg-slate-900/70"></div>
             <div className="container relative">
                 <div className="grid grid-cols-1 text-center">
-                    <h3 className="mb-4 md:text-2xl text-xl text-white font-semibold">Estou disponível para projetos freelancers</h3>
+                    <h3 className="mb-4 md:text-2xl text-xl text-white font-semibold">Estou disponível para freelancer</h3>
 
                     <p className="text-white/80 max-w-xl mx-auto text-[15px]">Impulsione seu negócio para o sucesso. Vamos juntos alcançar novos patamares de <b>excelência e prosperidade digital</b>.</p>
 

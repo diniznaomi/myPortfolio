@@ -25,13 +25,13 @@ let transporter = nodemailer.createTransport({
 });
 
 app.post('/send-email', (req, res) => {
-  const { name, email, subject, message } = req.body;
+  const { name, email, city, subject, message } = req.body;
 
   const mailOptions = {
     from: process.env.EMAIL_USER,
     to: process.env.PERSONAL_EMAIL,
     subject: subject,
-    text: `Nome: ${name}\nEmail: ${email}\n\n${message}`
+    text: `Nome: ${name}\nEmail: ${email}\nCidade: ${city}\n\n${message}`
   };
 
   transporter.sendMail(mailOptions, function (err, data) {

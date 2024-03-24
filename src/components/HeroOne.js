@@ -10,7 +10,7 @@ export default function HeroOne() {
                 <div className="container">
                     <div className="grid md:grid-cols-2 grid-cols-1 items-center gap-[30px]">
                         <div>
-                            <h4 className="font-bold lg:text-[40px] text-3xl lg:leading-normal leading-normal mb-4">Bem-vindo(a)! Eu sou <br />
+                            <h4 className="font-bold lg:text-[40px] text-3xl lg:leading-normal leading-normal mb-4">Olá! Eu sou <br />
                                 <TypeAnimation
                                     sequence={[
                                         // Same substring at the start will only be typed out once, initially
@@ -27,7 +27,7 @@ export default function HeroOne() {
                                     repeat={Infinity}
                                 />
                             </h4>
-                            <p className="text-slate-400 max-w-xl">Participo de times interdiciplinares, nacionais e internacionais, em projetos de grande escala para clientes como Banco Inter, Vale SA, Hermes Pardini, Coca-Cola, entre outros. Tendo experienciado todos os estágios do desenvolvimento web.</p>
+                            <p className="text-slate-400 max-w-xl">Participo de projetos nacionais e internacionais, de pequenas e grandes escalas. Tendo experienciado todos os estágios do desenvolvimento web.</p>
 
                             <div className="mt-6">
                                 <Link to="https://wa.me/5531995737924" target="_blank" className="btn bg-amber-500 hover:bg-amber-600 border-amber-500 hover:border-amber-600 text-white rounded-md">

@@ -67,7 +67,7 @@ export const servicesData = [
     },
     {
         title: 'Conte Sua História',
-        desc: 'Sites responsivos e envolventes que contém a história da sua organização',
+        desc: 'Sites contemporâneos e envolventes que contém a história da sua organização',
         Icon: Icon.Award
     },
     {

@@ -5,35 +5,90 @@ import { sendEmail } from "./../service";
 
 
 export default function GetInTouch() {
-    const [name, setName] = useState('');
-    const [email, setEmail] = useState('');
-    const [subject, setSubject] = useState('');
-    const [message, setMessage] = useState('');
+    const [name, setName] = useState(null);
+    const [email, setEmail] = useState(null);
+    const [city, setCity] = useState(null);
+    const [subject, setSubject] = useState(null);
+    const [message, setMessage] = useState(null);
+    const [showError, setShowError] = useState(false);
+    const [errors, setErrors] = useState([]);
+    const [sentMessage, setSentMessage] = useState(false);
 
 
-    const handleChangeName = (event) => {
-        setName(event.target.value);
+    const handleChange = (event) => {
+        const { name, value } = event.target;
+        switch (name) {
+            case "name":
+                setName(value);
+                break;
+            case "email":
+                setEmail(value);
+                break;
+            case "city":
+                setCity(value);
+                break;
+            case "subject":
+                setSubject(value);
+                break;
+            case "message":
+                setMessage(value);
+                break;
+            default:
+                break;
+        }
     };
 
-    const handleChangeEmail = (event) => {
-        setEmail(event.target.value);
+    const validateForm = () => {
+        let formIsValid = true;
+        const errorsList = [];
+
+        if (!name) {
+            errorsList.push("Nome é obrigatório");
+            formIsValid = false;
+        }
+
+        if (!email) {
+            errorsList.push("Email é obrigatório");
+            formIsValid = false;
+        }
+
+        if (!subject) {
+            errorsList.push("Assunto é obrigatório");
+            formIsValid = false;
+        }
+
+        if (!message) {
+            errorsList.push("Mensagem é obrigatória");
+            formIsValid = false;
+        }
+
+        setErrors(errorsList);
+        setShowError(!formIsValid);
+        setSentMessage(formIsValid);
+
+        return formIsValid;
     };
 
-    const handleChangeSubject = (event) => {
-        setSubject(event.target.value);
-    };
-
-    const handleChangeMessage = (event) => {
-        setMessage(event.target.value);
-    };
-
-    const sendMessage = () => {
-        sendEmail({
-            name: name,
-            email: email,
-            subject: subject,
-            message: message
-        })
+    const sendMessage = (event) => {
+        event.preventDefault();
+        const isValid = validateForm();
+        if (isValid) {
+            sendEmail({
+                name: name,
+                email: email,
+                city: city,
+                subject: subject,
+                message: message
+            });
+            // Limpar os campos após o envio bem-sucedido
+            setName('');
+            setEmail('');
+            setCity('');
+            setSubject('');
+            setMessage('');
+            setShowError(false);
+            setSentMessage(true);
+        }
     };
 
 
@@ -57,9 +112,10 @@ export default function GetInTouch() {
                                             id="name"
                                             type="text"
                                             className="form-input w-full py-2 px-3 border border-inherit dark:border-gray-800 dark:bg-slate-900 dark:text-slate-200 rounded h-10 outline-none bg-transparent focus:border-amber-500/50 dark:focus:border-amber-500/50 focus:shadow-none focus:ring-0 text-[15px]"
-                                            placeholder="Nome :"
+                                            placeholder="Nome * :"
                                             value={name}
-                                            onChange={handleChangeName}
+                                            onChange={handleChange}
+                                            required
                                         />
                                     </div>
 
@@ -69,45 +125,77 @@ export default function GetInTouch() {
                                             id="email"
                                             type="email"
                                             className="form-input w-full py-2 px-3 border border-inherit dark:border-gray-800 dark:bg-slate-900 dark:text-slate-200 rounded h-10 outline-none bg-transparent focus:border-amber-500/50 dark:focus:border-amber-500/50 focus:shadow-none focus:ring-0 text-[15px]"
-                                            placeholder="Email :"
+                                            placeholder="Email * :"
                                             value={email}
-                                            onChange={handleChangeEmail}
+                                            onChange={handleChange}
+                                            required
                                         />
                                     </div>
                                 </div>
 
                                 <div className="grid grid-cols-1">
+                                <div className="mb-5">
+                                        <input
+                                            name="city"
+                                            id="city"
+                                            className="form-input w-full py-2 px-3 border border-inherit dark:border-gray-800 dark:bg-slate-900 dark:text-slate-200 rounded h-10 outline-none bg-transparent focus:border-amber-500/50 dark:focus:border-amber-500/50 focus:shadow-none focus:ring-0 text-[15px]"
+                                            placeholder="Cidade :"
+                                            value={city}
+                                            onChange={handleChange}
+                                            required
+                                        />
+                                    </div>
                                     <div className="mb-5">
                                         <input
                                             name="subject"
                                             id="subject"
                                             className="form-input w-full py-2 px-3 border border-inherit dark:border-gray-800 dark:bg-slate-900 dark:text-slate-200 rounded h-10 outline-none bg-transparent focus:border-amber-500/50 dark:focus:border-amber-500/50 focus:shadow-none focus:ring-0 text-[15px]"
-                                            placeholder="Assunto :"
+                                            placeholder="Assunto * :"
                                             value={subject}
-                                            onChange={handleChangeSubject}
+                                            onChange={handleChange}
+                                            required
                                         />
                                     </div>
 
                                     <div className="mb-5">
                                         <textarea
-                                            name="comments"
-                                            id="comments"
+                                            name="message"
+                                            id="message"
                                             className="form-input w-full py-2 px-3 border border-inherit dark:border-gray-800 dark:bg-slate-900 dark:text-slate-200 rounded h-28 outline-none bg-transparent focus:border-amber-500/50 dark:focus:border-amber-500/50 focus:shadow-none focus:ring-0 text-[15px]"
-                                            placeholder="Mensagem :"
+                                            placeholder="Mensagem * :"
                                             value={message}
-                                            onChange={handleChangeMessage}
+                                            onChange={handleChange}
+                                            required
                                         />
                                     </div>
                                 </div>
-                                <button
-                                    type="submit"
-                                    id="submit"
-                                    name="send"
-                                    onClick={sendMessage}
-                                    className="btn bg-amber-500 hover:bg-amber-600 border-amber-500 hover:border-amber-600 text-white rounded-md h-11 justify-center flex items-center"
-                                >
-                                    Enviar
-                                </button>
+                                <div className="grid lg:grid-cols-12">
+                                    <div className="lg:col-span-3">
+                                        <button
+                                            type="submit"
+                                            id="submit"
+                                            name="send"
+                                            onClick={sendMessage}
+                                            className="btn bg-amber-500 hover:bg-amber-600 border-amber-500 hover:border-amber-600 text-white rounded-md h-11 justify-center flex items-center"
+                                        >
+                                            Enviar
+                                        </button>
+
+                                    </div>
+                                    <div className="lg:col-span-8">
+                                        {showError &&
+                                            (
+                                                <p className="text-red-600 text-sm">Por favor, preencha todos os campos obrigatórios:<br/>{errors[0]}</p>
+                                            )
+                                        }
+                                        {sentMessage &&
+                                            (
+                                                <p className="text-green-600 text-sm">Mensagem enviada!</p>
+                                            )
+                                        }
+                                    </div>
+                                </div>
+
                             </form>
                         </div>
                     </div>
