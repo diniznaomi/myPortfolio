@@ -19,6 +19,7 @@ export default function Navbar() {
         ) {
             if (navbar !== null) {
                 navbar?.classList.add("is-sticky");
+                if(isMenuOpen) setIsMenuOpen(false);
             }
         } else {
             if (navbar !== null) {
@@ -83,7 +84,7 @@ export default function Navbar() {
                         <li className="nav-item">
                             <Link1 to="service" activeClass="active" spy={true} smooth={true} duration={500} className="nav-link">Serviços</Link1>
                         </li>
-                        {/* <li className="nav-item">
+{/* <li className="nav-item">
                             <Link1 to="experience" activeClass="active" spy={true} smooth={true} duration={500} className="nav-link">Experiência</Link1>
                         </li> */}
                         <li className="nav-item">
