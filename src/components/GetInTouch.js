@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import * as Unicons from '@iconscout/react-unicons'
 import { Link } from "react-router-dom";
 import { sendEmail } from "./../service";
+import { validateEmail } from "./../utils";
 
 
 export default function GetInTouch() {
@@ -43,22 +44,28 @@ export default function GetInTouch() {
         const errorsList = [];
 
         if (!name) {
-            errorsList.push("Nome é obrigatório");
+            errorsList.push("Nome *");
             formIsValid = false;
         }
 
         if (!email) {
-            errorsList.push("Email é obrigatório");
+            errorsList.push("Email *");
             formIsValid = false;
+        }else{
+            const emailIsValid = validateEmail(email);
+            if(!emailIsValid){
+                errorsList.push("Email inválido")
+                formIsValid = false;
+            }
         }
 
         if (!subject) {
-            errorsList.push("Assunto é obrigatório");
+            errorsList.push("Assunto *");
             formIsValid = false;
         }
 
         if (!message) {
-            errorsList.push("Mensagem é obrigatória");
+            errorsList.push("Mensagem *");
             formIsValid = false;
         }
 
@@ -73,13 +80,13 @@ export default function GetInTouch() {
         event.preventDefault();
         const isValid = validateForm();
         if (isValid) {
-            sendEmail({
-                name: name,
-                email: email,
-                city: city,
-                subject: subject,
-                message: message
-            });
+            // sendEmail({
+            //     name: name,
+            //     email: email,
+            //     city: city,
+            //     subject: subject,
+            //     message: message
+            // });
             // Limpar os campos após o envio bem-sucedido
             setName('');
             setEmail('');
@@ -182,10 +189,10 @@ export default function GetInTouch() {
                                         </button>
 
                                     </div>
-                                    <div className="lg:col-span-8">
+                                    <div className="lg:col-span-8 mt-2">
                                         {showError &&
                                             (
-                                                <p className="text-red-600 text-sm">Por favor, preencha todos os campos obrigatórios:<br/>{errors[0]}</p>
+                                                <p className="text-red-600 text-sm">Preencha todo os campos obrigatórios: {errors[0]}</p>
                                             )
                                         }
                                         {sentMessage &&

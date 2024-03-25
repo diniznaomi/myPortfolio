@@ -32,7 +32,7 @@ export default function Index(){
             {/* <AboutUs/> */}
             <Services/> 
             <CTABanner/>
-            <Experience/>
+            {/* <Experience/> */}
             <Projects/>
             {/* <Clients/> */}
             {/* <Blogs/> */}
