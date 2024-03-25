@@ -26,7 +26,7 @@ export default function Projects() {
 
     return (
         <>
-            <section className="relative md:py-24 py-16" id="project">
+            <section className="relative md:py-24 dark:bg-slate-800 py-16" id="project">
                 <div className="container">
                     <div className="grid grid-cols-1 pb-8 text-center">
                         <h3 className="mb-6 md:text-2xl text-xl md:leading-normal leading-normal font-semibold">My Work & Projects</h3>

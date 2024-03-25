@@ -100,7 +100,7 @@ export default function GetInTouch() {
 
 
     return (
-        <section className="relative md:py-24 py-16 bg-gray-50 dark:bg-slate-800" id="contact">
+        <section className="relative md:py-24 py-16 bg-gray-50 dark:bg-slate-900" id="contact">
             <div className="container">
                 <div className="grid grid-cols-1 pb-8 text-center">
                     <h3 className="mb-6 md:text-2xl text-xl md:leading-normal leading-normal font-semibold">Estou aqui para ajudar!</h3>
@@ -110,7 +110,7 @@ export default function GetInTouch() {
 
                 <div className="grid grid-cols-1 lg:grid-cols-12 md:grid-cols-2 mt-8 items-center gap-[30px]">
                     <div className="lg:col-span-8">
-                        <div className="p-6 rounded-md shadow bg-white dark:bg-slate-900">
+                        <div className="p-6 rounded-md shadow bg-white dark:bg-slate-800">
                             <form>
                                 <div className="grid lg:grid-cols-12 lg:gap-5">
                                     <div className="lg:col-span-6 mb-5">
@@ -118,7 +118,7 @@ export default function GetInTouch() {
                                             name="name"
                                             id="name"
                                             type="text"
-                                            className="form-input w-full py-2 px-3 border border-inherit dark:border-gray-800 dark:bg-slate-900 dark:text-slate-200 rounded h-10 outline-none bg-transparent focus:border-amber-500/50 dark:focus:border-amber-500/50 focus:shadow-none focus:ring-0 text-[15px]"
+                                            className="form-input w-full py-2 px-3 border border-inherit dark:border-gray-900 dark:bg-slate-00 dark:text-slate-200 rounded h-10 outline-none bg-transparent focus:border-amber-500/50 dark:focus:border-amber-500/50 focus:shadow-none focus:ring-0 text-[15px]"
                                             placeholder="Nome * :"
                                             value={name}
                                             onChange={handleChange}
@@ -131,7 +131,7 @@ export default function GetInTouch() {
                                             name="email"
                                             id="email"
                                             type="email"
-                                            className="form-input w-full py-2 px-3 border border-inherit dark:border-gray-800 dark:bg-slate-900 dark:text-slate-200 rounded h-10 outline-none bg-transparent focus:border-amber-500/50 dark:focus:border-amber-500/50 focus:shadow-none focus:ring-0 text-[15px]"
+                                            className="form-input w-full py-2 px-3 border border-inherit dark:border-gray-900 dark:bg-slate-800 dark:text-slate-200 rounded h-10 outline-none bg-transparent focus:border-amber-500/50 dark:focus:border-amber-500/50 focus:shadow-none focus:ring-0 text-[15px]"
                                             placeholder="Email * :"
                                             value={email}
                                             onChange={handleChange}
@@ -145,7 +145,7 @@ export default function GetInTouch() {
                                         <input
                                             name="city"
                                             id="city"
-                                            className="form-input w-full py-2 px-3 border border-inherit dark:border-gray-800 dark:bg-slate-900 dark:text-slate-200 rounded h-10 outline-none bg-transparent focus:border-amber-500/50 dark:focus:border-amber-500/50 focus:shadow-none focus:ring-0 text-[15px]"
+                                            className="form-input w-full py-2 px-3 border border-inherit dark:border-gray-900 dark:bg-slate-800 dark:text-slate-200 rounded h-10 outline-none bg-transparent focus:border-amber-500/50 dark:focus:border-amber-500/50 focus:shadow-none focus:ring-0 text-[15px]"
                                             placeholder="Cidade :"
                                             value={city}
                                             onChange={handleChange}
@@ -156,7 +156,7 @@ export default function GetInTouch() {
                                         <input
                                             name="subject"
                                             id="subject"
-                                            className="form-input w-full py-2 px-3 border border-inherit dark:border-gray-800 dark:bg-slate-900 dark:text-slate-200 rounded h-10 outline-none bg-transparent focus:border-amber-500/50 dark:focus:border-amber-500/50 focus:shadow-none focus:ring-0 text-[15px]"
+                                            className="form-input w-full py-2 px-3 border border-inherit dark:border-gray-900 dark:bg-slate-800 dark:text-slate-200 rounded h-10 outline-none bg-transparent focus:border-amber-500/50 dark:focus:border-amber-500/50 focus:shadow-none focus:ring-0 text-[15px]"
                                             placeholder="Assunto * :"
                                             value={subject}
                                             onChange={handleChange}
@@ -168,7 +168,7 @@ export default function GetInTouch() {
                                         <textarea
                                             name="message"
                                             id="message"
-                                            className="form-input w-full py-2 px-3 border border-inherit dark:border-gray-800 dark:bg-slate-900 dark:text-slate-200 rounded h-28 outline-none bg-transparent focus:border-amber-500/50 dark:focus:border-amber-500/50 focus:shadow-none focus:ring-0 text-[15px]"
+                                            className="form-input w-full py-2 px-3 border border-inherit dark:border-gray-900 dark:bg-slate-800 dark:text-slate-200 rounded h-28 outline-none bg-transparent focus:border-amber-500/50 dark:focus:border-amber-500/50 focus:shadow-none focus:ring-0 text-[15px]"
                                             placeholder="Mensagem * :"
                                             value={message}
                                             onChange={handleChange}
