@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Link as Link1 } from 'react-scroll';
 import * as Unicons from "@iconscout/react-unicons";
@@ -8,6 +8,21 @@ export default function Navbar() {
 
     const toggleMenu = () => {
         isMenuOpen ? setIsMenuOpen(false) : setIsMenuOpen(true);
+    };
+
+    const closeMenu = () => {
+        setIsMenuOpen(false);
+    };
+
+    useEffect(() => {
+        document.addEventListener("click", closeMenu);
+        return () => {
+            document.removeEventListener("click", closeMenu);
+        };
+    }, [setIsMenuOpen]);
+
+    const handleMenuClick = (e) => {
+        e.stopPropagation(); // Prevent closing menu when clicking inside the menu
     };
 
     window.addEventListener("scroll", windowScroll);
@@ -39,7 +54,7 @@ export default function Navbar() {
         }
     }
     return (
-        <nav className="navbar" id="navbar">
+        <nav className="navbar" id="navbar" onClick={handleMenuClick}>
             <div className="container flex flex-wrap items-center justify-between">
                 <Link to="/index" className="navbar-brand md:me-8" href="index.html">
                     <Link to="#" className="text-[22px] focus:outline-none">
