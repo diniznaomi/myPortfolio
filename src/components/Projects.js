@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import { Link as Link2 } from "react-router-dom";
-import * as Unicons from '@iconscout/react-unicons'
 import Lightbox from 'react-18-image-lightbox';
 import '../../node_modules/react-18-image-lightbox/style.css';
 import { Carousel } from "./Carousel";
@@ -32,12 +30,6 @@ const imageAdv = [
     "/images/works/adv10.png",
 ]
 
-let slides = [
-    "https://i.pinimg.com/originals/51/82/ac/5182ac536727d576c78a9320ac62de30.jpg",
-    "https://wallpapercave.com/wp/wp3386769.jpg",
-    "https://wallpaperaccess.com/full/809523.jpg",
-    "https://getwallpapers.com/wallpaper/full/5/c/0/606489.jpg",
-];
 
 export default function Projects() {
     const [photoIndex, setActiveIndex] = useState(0);
@@ -61,7 +53,7 @@ export default function Projects() {
                     </div>
 
 
-                    <div className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-1 mt-8 gap-[30px] justify-center items-center">
+                    <div className="grid lg:grid-cols-3 md:grid-cols-3 grid-cols-1 mt-8 gap-[30px] justify-center items-center">
                         <div className="relative group overflow-hidden rounded-lg shadow shadow-slate-200 dark:shadow-gray-800">
                             <Carousel slides={images} />
                             <div className="absolute bottom-0 opacity-0 group-hover:opacity-100 m-6 transition-all duration-500">
@@ -76,16 +68,9 @@ export default function Projects() {
                         </div>
 
                         <div className="relative group overflow-hidden rounded-lg shadow shadow-slate-200 dark:shadow-gray-800">
-                         <Carousel slides={imageAdv} />
+                         <Carousel slides={imageAdv}/>
                             <div className="absolute bottom-0 opacity-0 group-hover:opacity-100 m-6 transition-all duration-500">
-                                <span className="block text-sm text-yellow-500">Landing</span>
-                            </div>
-                        </div>
-
-                        <div className="relative group overflow-hidden rounded-lg shadow shadow-slate-200 dark:shadow-gray-800">
-                            <Carousel slides={images} />
-                            <div className="absolute bottom-0 opacity-0 group-hover:opacity-100 m-6 transition-all duration-500">
-                                <span className="block text-sm text-yellow-500">Landing</span>
+                                <span className="block text-sm text-yellow-500">Advocacia</span>
                             </div>
                         </div>
 
@@ -105,7 +90,7 @@ export default function Projects() {
                     </div>
                 </div>
             </section>
-            {isOpen && (
+            {/* {isOpen && (
                 <Lightbox
                     mainSrc={images[photoIndex]}
                     nextSrc={images[(photoIndex + 1) % images.length]}
@@ -118,8 +103,7 @@ export default function Projects() {
                         setActiveIndex((photoIndex + 1) % images.length)
                     }
                 />
-            )}
-
+            )} */}
         </>
 
     )

@@ -25,10 +25,10 @@ export const Carousel = ({ slides }) => {
       <div className="overflow-hidden">
         <div
           className="flex transition-transform duration-500" // Adicionando transição
-          style={{ transform: `translateX(-${current * 100}%)` }}
+          style={{ transform: `translateX(-${current * 100}%)`, maxHeight: '25em'}}
         >
           {slides.map((slide, index) => (
-            <img key={index} src={slide} alt={`Slide ${index}`} className="w-full" />
+            <img key={index} src={slide} alt={`Slide ${index}`} />
           ))}
         </div>
       </div>

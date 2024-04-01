@@ -80,13 +80,13 @@ export default function GetInTouch() {
         event.preventDefault();
         const isValid = validateForm();
         if (isValid) {
-            // sendEmail({
-            //     name: name,
-            //     email: email,
-            //     city: city,
-            //     subject: subject,
-            //     message: message
-            // });
+            sendEmail({
+                name: name,
+                email: email,
+                city: city,
+                subject: subject,
+                message: message
+            });
             // Limpar os campos após o envio bem-sucedido
             setName('');
             setEmail('');
