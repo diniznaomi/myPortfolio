@@ -21,6 +21,17 @@ const imagesDonto = [
     "/images/works/Donto7.png",
 ];
 
+const imageAdv = [
+    "/images/works/adv.png",
+    "/images/works/adv2.png",
+    "/images/works/adv3.png",
+    "/images/works/adv4.png",
+    "/images/works/adv5.png",
+    "/images/works/adv6.png",
+    "/images/works/adv9.png",
+    "/images/works/adv10.png",
+]
+
 let slides = [
     "https://i.pinimg.com/originals/51/82/ac/5182ac536727d576c78a9320ac62de30.jpg",
     "https://wallpapercave.com/wp/wp3386769.jpg",
@@ -65,7 +76,7 @@ export default function Projects() {
                         </div>
 
                         <div className="relative group overflow-hidden rounded-lg shadow shadow-slate-200 dark:shadow-gray-800">
-                         <Carousel slides={images} />
+                         <Carousel slides={imageAdv} />
                             <div className="absolute bottom-0 opacity-0 group-hover:opacity-100 m-6 transition-all duration-500">
                                 <span className="block text-sm text-yellow-500">Landing</span>
                             </div>
