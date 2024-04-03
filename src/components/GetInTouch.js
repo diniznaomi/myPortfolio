@@ -216,7 +216,7 @@ export default function GetInTouch() {
 
                                 <div className="flex-1 ms-6">
                                     <h5 className="text-[17px] dark:text-white mb-2 font-medium">Telefone</h5>
-                                    <Link to="tel:+152534-468-854" className="text-slate-400 text-[15px]">31 995737924</Link>
+                                    <Link to="tel:+5531993136451" className="text-slate-400 text-[15px]">31 99313-6451</Link>
                                 </div>
                             </div>
 
@@ -227,7 +227,7 @@ export default function GetInTouch() {
 
                                 <div className="flex-1 ms-6">
                                     <h5 className="text-[17px] dark:text-white mb-2 font-medium">Email</h5>
-                                    <Link to="mailto:contact@example.com" className="text-slate-400 text-[15px]">nalindsaydm@gmail.com</Link>
+                                    <Link to="mailto:seusitebynaomi@hotmail.com" className="text-slate-400 text-[15px]">seusitebynaomi@hotmail.com</Link>
                                 </div>
                             </div>
 
