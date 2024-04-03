@@ -1,7 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
-const { OAuth2Client } = require('google-auth-library');
 require('dotenv').config();
 
 const app = express();
