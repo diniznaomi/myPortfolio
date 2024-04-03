@@ -105,7 +105,7 @@ export default function GetInTouch() {
                 <div className="grid grid-cols-1 pb-8 text-center">
                     <h3 className="mb-6 md:text-2xl text-xl md:leading-normal leading-normal font-semibold">Estou aqui para ajudar!</h3>
 
-                    <p className="text-slate-400 max-w-xl mx-auto text-[15px]">Entre em contato agora mesmo para esclarecer todas as suas dúvidas e iniciar sua jornada rumo à excelência digital.</p>
+                    <p className="text-slate-400 max-w-xl mx-auto text-[15px]">Entre em contato agora mesmo para esclarecer todas as suas dúvidas.</p>
                 </div>
 
                 <div className="grid grid-cols-1 lg:grid-cols-12 md:grid-cols-2 mt-8 items-center gap-[30px]">
