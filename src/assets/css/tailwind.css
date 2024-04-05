@@ -1298,6 +1298,10 @@ video {
   --tw-text-opacity: 1 !important;
   color: rgb(220 38 38 / var(--tw-text-opacity)) !important;
 }
+.text-green-600{
+  --tw-text-opacity: 1 !important;
+  color: rgb(143 206 0/ var(--tw-text-opacity)) !important;
+}
 .text-slate-400{
   --tw-text-opacity: 1 !important;
   color: rgb(148 163 184 / var(--tw-text-opacity)) !important;
