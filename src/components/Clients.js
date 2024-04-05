@@ -32,9 +32,9 @@ const settings = {
         },
     },
 }
-export default function Clients(){
-   
-    return(
+export default function Clients() {
+
+    return (
         <section className="relative md:py-24 py-16 bg-gray-50 dark:bg-slate-800" id="testi">
             <div className="container">
                 <div className="grid grid-cols-1 pb-8 text-center">
@@ -48,7 +48,7 @@ export default function Clients(){
                             {
                                 review.map((item, index) => (
                                     <div className="tiny-slide" key={index}>
-                           
+
                                         <div className="customer-testi">
                                             <div className="content relative rounded shadow shadow-gray-200 dark:shadow-gray-800 m-2 p-6 bg-white dark:bg-slate-900">
                                                 <i className="mdi mdi-format-quote-open mdi-48px text-amber-500"></i>
@@ -61,14 +61,14 @@ export default function Clients(){
                                                     <li className="inline"><i className="mdi mdi-star"></i></li>
                                                 </ul>
                                             </div>
-                                            
+
                                             <div className="text-center mt-5">
-                                                <img src={item.image} className="h-14 w-14 rounded-full shadow-md mx-auto mb-1" alt=""/>
+                                                <img src={item.image} className="h-14 w-14 rounded-full shadow-md mx-auto mb-1" alt="" />
                                                 <Link to="" className="text-base font-medium h5 hover:text-amber-500 duration-500 ease-in-out">{item.name}</Link>
                                                 <span className="text-slate-400 text-sm block">{item.designation}</span>
                                             </div>
                                         </div>
-                                    
+
                                     </div>
                                 ))
                             }

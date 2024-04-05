@@ -14,19 +14,28 @@ import Clients from "../components/Clients";
 export default function Index(){
     useEffect(() => {
         document.documentElement.setAttribute("dir", "ltr");
-        document.documentElement.classList.add('light');
+        
+        const now = new Date();
+        const currentHour = now.getHours();
+
+        if(currentHour >= 18 || currentHour < 6){
+            document.documentElement.classList.add('dark');
+        }else{
+            document.documentElement.classList.add('light');
+        }
+        
       }, []);
     return(
         <>
             <Navbar/>
             <HeroOne/>
-            <AboutUs/>
-            <Services/>
+            {/* <AboutUs/> */}
+            <Services/> 
             <CTABanner/>
-            <Experience/>
+            {/* <Experience/> */}
             <Projects/>
-            <Clients/>  
-            <Blogs/>
+            {/* <Clients/> */}
+            {/* <Blogs/> */}
             <GetInTouch/>
             <Footer/>
         </>
