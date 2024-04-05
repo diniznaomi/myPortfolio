@@ -30,7 +30,7 @@ export default function HeroOne() {
                             <p className="text-slate-400 max-w-xl">Participo de projetos nacionais e internacionais, de pequenas e grandes escalas. Tendo experienciado todos os estágios do desenvolvimento web.</p>
 
                             <div className="mt-6">
-                                <Link to="https://wa.me/5531995737924" target="_blank" className="btn bg-amber-500 hover:bg-amber-600 border-amber-500 hover:border-amber-600 text-white rounded-md">
+                                <Link to="https://wa.me/5531993136451" target="_blank" className="btn bg-amber-500 hover:bg-amber-600 border-amber-500 hover:border-amber-600 text-white rounded-md">
                                     Faça contato
                                     <img width={"22px"} height={"22px"} src="/images/icons/icons8-wpp.png" className="m-2" alt="" />
                                 </Link>
